@@ -14,7 +14,7 @@ const TABS = [
   { label: "Add", href: "#", icon: "M12 5v14M5 12h14", filled: true },
   {
     label: "Coach",
-    href: "#",
+    href: "/chat",
     icon: "M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z",
   },
   {
