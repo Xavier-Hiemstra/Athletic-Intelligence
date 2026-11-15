@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { TabBar } from "@/components/tab-bar";
 
@@ -135,12 +136,12 @@ export default function Home() {
         </div>
       </section>
 
-      <button
-        type="button"
-        className="mt-4 h-12 w-full rounded-md bg-accent text-base font-semibold text-white"
+      <Link
+        href="/chat/generate"
+        className="mt-4 flex h-12 w-full items-center justify-center rounded-md bg-accent text-base font-semibold text-white"
       >
         Generate your workout plan
-      </button>
+      </Link>
 
       <section className="mt-6 grid grid-cols-2 gap-4">
         {STATS.map((s) => (
