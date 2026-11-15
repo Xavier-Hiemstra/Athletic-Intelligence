@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -31,12 +32,12 @@ export default function Home() {
         <p className="mt-2 text-base text-ink-muted">
           Comprehensive Data · Customized Workouts
         </p>
-        <button
-          type="button"
-          className="mt-8 h-12 w-full rounded-md bg-red text-base font-semibold text-white"
+        <Link
+          href="/profile"
+          className="mt-8 flex h-12 w-full items-center justify-center rounded-md bg-red text-base font-semibold text-white"
         >
           Start Training
-        </button>
+        </Link>
       </div>
     </main>
   );
