@@ -39,11 +39,11 @@ function Check({ on }: { on: boolean }) {
     <span
       aria-hidden
       className={`flex h-6 w-6 items-center justify-center rounded-sm border ${
-        on ? "border-ink bg-ink" : "border-line"
+        on ? "border-accent bg-accent" : "border-line"
       }`}
     >
       {on && (
-        <svg viewBox="0 0 12 12" className="h-3.5 w-3.5 text-surface-100">
+        <svg viewBox="0 0 12 12" className="h-3.5 w-3.5 text-white">
           <path
             d="M2 6.5 5 9.5 10 3"
             fill="none"
@@ -72,7 +72,7 @@ function CheckRow({
       role="checkbox"
       aria-checked={on}
       onClick={onToggle}
-      className={`${rowClass} ${on ? "border-ink" : ""}`}
+      className={`${rowClass} ${on ? "border-accent" : ""}`}
     >
       <AppIcon app={app} />
       <span className="flex-1 text-base font-semibold text-ink">
@@ -175,7 +175,7 @@ export default function Connect() {
                 }
                 if (e.key === "Escape") setOpen(false);
               }}
-              className="h-12 w-full rounded-sm border border-line bg-surface-200 px-3 text-base text-ink placeholder:text-ink-muted focus:border-ink focus:outline-none"
+              className="h-12 w-full rounded-sm border border-line bg-surface-200 px-3 text-base text-ink placeholder:text-ink-muted focus:border-accent focus:outline-none"
             />
             {open && (
               <ul
@@ -274,7 +274,7 @@ export default function Connect() {
             <>
               <div
                 aria-hidden
-                className="h-14 w-14 animate-spin rounded-full border-2 border-line border-t-ink motion-reduce:animate-none"
+                className="h-14 w-14 animate-spin rounded-full border-2 border-line border-t-accent motion-reduce:animate-none"
               />
               <p className="text-xl font-semibold text-ink">
                 Building your Training Profile
@@ -285,7 +285,7 @@ export default function Connect() {
               <svg
                 aria-hidden
                 viewBox="0 0 56 56"
-                className="h-14 w-14 text-ink"
+                className="h-14 w-14 text-accent"
               >
                 <circle
                   cx="28"

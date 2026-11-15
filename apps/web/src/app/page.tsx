@@ -19,7 +19,7 @@ export default function Home() {
       />
 
       <div className="relative w-full px-4 pb-12">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ink-muted">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-text">
           Athletic Intelligence
         </p>
         <h1 className="mt-2 text-[54px] font-extrabold uppercase leading-[60px] text-ink">
@@ -34,7 +34,7 @@ export default function Home() {
         </p>
         <Link
           href="/profile"
-          className="mt-8 flex h-12 w-full items-center justify-center rounded-md bg-red text-base font-semibold text-white"
+          className="mt-8 flex h-12 w-full items-center justify-center rounded-md bg-accent text-base font-semibold text-white"
         >
           Start Training
         </Link>

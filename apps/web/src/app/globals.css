@@ -3,16 +3,14 @@
 /* Brand colour tokens — source: docs/brand-guide.md §04.
    Dark is the default theme. Set data-theme="light" for print/PDF/email surfaces. */
 :root {
-  --surface-100: #050505;
-  --surface-200: #101010;
-  --surface-300: #1a1a1a;
-  --line: #262626;
-  --ink: #f2f2f2;
-  --ink-muted: #9c9c9c;
-  --red: #c8102e;
-  --red-text: #ff4d5e;
-  --blue: #1e46d6;
-  --blue-text: #7c9bff;
+  --surface-100: #000000;
+  --surface-200: #1a1a1a;
+  --surface-300: #262626;
+  --line: #2e2e2e;
+  --ink: #ffffff;
+  --ink-muted: #a0a0a0;
+  --accent: #ff5722;
+  --accent-text: #ff6a3d;
 }
 
 [data-theme="light"] {
@@ -22,10 +20,8 @@
   --line: #d9d9d9;
   --ink: #0a0a0a;
   --ink-muted: #5c5c5c;
-  --red: #c8102e;
-  --red-text: #c8102e;
-  --blue: #1e46d6;
-  --blue-text: #1e46d6;
+  --accent: #ff5722;
+  --accent-text: #c2410c;
 }
 
 @theme inline {
@@ -35,10 +31,8 @@
   --color-line: var(--line);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
-  --color-red: var(--red);
-  --color-red-text: var(--red-text);
-  --color-blue: var(--blue);
-  --color-blue-text: var(--blue-text);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

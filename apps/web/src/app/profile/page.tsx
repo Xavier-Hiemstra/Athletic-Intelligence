@@ -11,7 +11,7 @@ import {
 } from "@/components/onboarding";
 
 const inputClass =
-  "h-12 w-full rounded-sm border border-line bg-surface-200 px-3 text-base text-ink placeholder:text-ink-muted focus:border-ink focus:outline-none";
+  "h-12 w-full rounded-sm border border-line bg-surface-200 px-3 text-base text-ink placeholder:text-ink-muted focus:border-accent focus:outline-none";
 
 function Field({
   label,
@@ -58,7 +58,7 @@ function Chips({
           aria-pressed={value === o}
           className={`h-12 flex-1 rounded-sm border px-3 text-base font-semibold ${
             value === o
-              ? "border-ink bg-ink text-surface-100"
+              ? "border-accent bg-accent text-white"
               : "border-line bg-surface-200 text-ink"
           }`}
         >

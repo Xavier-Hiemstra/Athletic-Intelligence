@@ -1,6 +1,6 @@
 # Athletic Intelligence — Brand Guidelines
 
-Version 1 · November 2026. Converted from `Athletic-Intelligence-Brand-Guidelines.pdf`.
+Version 1 · November 2026 (app palette updated to black, white and orange). Converted from `Athletic-Intelligence-Brand-Guidelines.pdf`.
 Code tokens for the colours below live in `apps/web/src/app/globals.css`.
 
 Logo, colour, type, voice and layout for the Athletic Intelligence platform.
@@ -17,14 +17,14 @@ It launches for marathon training, with bodybuilding and triathlon to follow.
 
 The brand should feel like a premium service built around one athlete: dark, quiet and exact. Athletes should feel their training is being designed for them, not generated for everyone.
 
-**Black is the room. White is the information. Red is effort. Blue is intelligence and recovery.**
+**Black is the room. White is the information. Orange is the energy.**
 
 ### What premium means here
 
 - **Dark by default.** The app, the website and the app icon all live on near-black. The light theme is for printed plans, PDFs and email.
 - **Restraint over decoration.** No gradients, glows, textures or stock-photo heroes. Quality shows in spacing, type and precise numbers.
 - **Space is the luxury.** Give each screen one job and room around it. Fewer cards, larger numbers, generous margins.
-- **Colour is earned.** Most screens are black and white only. Red and blue appear when something matters.
+- **Colour is earned.** Most screens are black and white only. Orange runs through the whole app: buttons, rings, charts, active states and icons.
 - **Personal, not generic.** Always name what the plan was built from: "Built from your last 6 weeks and last night's HRV."
 
 ---
@@ -97,27 +97,26 @@ The wordmark is set in Archivo: ATHLETIC at 800 and INTELLIGENCE at 400 with wid
 
 | Colour | Hex | RGB |
 |---|---|---|
-| Black | `#050505` | 5 5 5 |
-| White | `#F2F2F2` | 242 242 242 |
-| Red | `#C8102E` | 200 16 46 |
-| Blue | `#1E46D6` | 30 70 214 |
+| Black | `#000000` | 0 0 0 |
+| White | `#FFFFFF` | 255 255 255 |
+| Orange | `#FF5722` | 255 87 34 |
 
 ### Tokens
 
 | Token | Dark | Light | Use |
 |---|---|---|---|
-| `surface-100` | `#050505` | `#FFFFFF` | Page background |
-| `surface-200` | `#101010` | `#F2F2F2` | Cards: workouts, plan weeks, stat tiles |
-| `surface-300` | `#1A1A1A` | `#E6E6E6` | Sheets, modals, pressed states |
-| `line` | `#262626` | `#D9D9D9` | Hairlines, borders, gridlines. Separate with lines, never shadows |
-| `ink` | `#F2F2F2` | `#0A0A0A` | Primary text (18:1 on black) |
-| `ink-muted` | `#9C9C9C` | `#5C5C5C` | Secondary text, captions, labels |
-| `red` | `#C8102E` | `#C8102E` | Effort and action: primary button, live workout, heart rate. **One per screen** |
-| `red-text` | `#FF4D5E` | `#C8102E` | Red words: alerts, missed targets, live labels |
-| `blue` | `#1E46D6` | `#1E46D6` | Intelligence and recovery: coach, readiness, easy days. **Fill only on black** |
-| `blue-text` | `#7C9BFF` | `#1E46D6` | Blue words: links, readiness scores, coach names |
+| `surface-100` | `#000000` | `#FFFFFF` | Page background |
+| `surface-200` | `#1A1A1A` | `#F2F2F2` | Cards: workouts, plan weeks, stat tiles |
+| `surface-300` | `#262626` | `#E6E6E6` | Sheets, modals, pressed states |
+| `line` | `#2E2E2E` | `#D9D9D9` | Hairlines, borders, gridlines. Separate with lines, never shadows |
+| `ink` | `#FFFFFF` | `#0A0A0A` | Primary text |
+| `ink-muted` | `#A0A0A0` | `#5C5C5C` | Secondary text, captions, labels |
+| `accent` | `#FF5722` | `#FF5722` | The brand colour: buttons, rings, chart lines, selected states, active tab, key icons |
+| `accent-text` | `#FF6A3D` | `#C2410C` | Orange words: links, positive changes, eyebrow labels, "Show all" |
 
-Red and blue are close in lightness. Never let colour alone tell them apart: pair them with a label, an icon or a line style (solid for effort, dashed for recovery).
+White text on `accent` is about 3.3:1, so keep it to 16 px semibold or larger.
+
+Never let colour alone carry meaning: pair it with a label, an icon, an arrow or a line style.
 
 ---
 
@@ -139,7 +138,7 @@ Archivo for titles. Public Sans for coach messages and UI. JetBrains Mono for ev
 
 ## 06 · Layout, data and icons
 
-Large white numbers on black. Example stat tiles: `READINESS 82`, `WEEKLY KM 48.6`, `AVG PACE 4:52`, with the footer "Week 9 of 18 · Built from your last 6 weeks and last night's HRV". A workout card reads "Tempo run — 8 km · 5 km at 4:35 /km" with a **Start workout** button. One red element per screen; blue marks the body and the coach.
+Large white numbers on black. Example stat tiles: `READINESS 82`, `WEEKLY KM 48.6`, `AVG PACE 4:52`, with the footer "Week 9 of 18 · Built from your last 6 weeks and last night's HRV". A workout card reads "Tempo run — 8 km · 5 km at 4:35 /km" with a **Start workout** button. Orange marks action, progress and the coach.
 
 ### Spacing
 
@@ -161,4 +160,4 @@ Large white numbers on black. Example stat tiles: `READINESS 82`, `WEEKLY KM 48.
 
 ### Icons
 
-Line icons, 1.5 px strokes, square or mitred corners to match the mark. Draw them in `ink-muted`; the active tab takes `ink`, and only a live workout takes red.
+Line icons, 1.5 px strokes, square or mitred corners to match the mark. Draw them in `ink-muted`; the active tab takes `ink`, and only a live workout takes orange.

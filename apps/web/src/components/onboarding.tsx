@@ -19,7 +19,7 @@ export function ProgressBar({
       {Array.from({ length: total }, (_, i) => (
         <div
           key={i}
-          className={`h-1 flex-1 ${i <= current ? "bg-ink" : "bg-line"}`}
+          className={`h-1 flex-1 ${i <= current ? "bg-accent" : "bg-line"}`}
         />
       ))}
     </div>
@@ -40,4 +40,4 @@ export const backClass =
   "flex h-12 w-28 items-center justify-center rounded-md border border-line bg-surface-200 text-base font-semibold text-ink";
 
 export const continueClass =
-  "h-12 flex-1 rounded-md bg-red text-base font-semibold text-white";
+  "h-12 flex-1 rounded-md bg-accent text-base font-semibold text-white";
