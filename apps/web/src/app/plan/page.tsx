@@ -118,18 +118,23 @@ export default function Plan() {
       </section>
 
       <section className="mt-6">
-        <SectionHeading title="Your coach" />
+        <SectionHeading title="Create a Challenge Group" />
         <div className="mt-4 flex items-center gap-3 rounded-md border border-line bg-surface-200 p-4">
           <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-accent text-white">
-            <Icon d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z" className="h-7 w-7" />
+            <Icon
+              d="M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3M12 14v4M8 21h8M10 18h4"
+              className="h-7 w-7"
+            />
           </span>
           <div className="flex-1">
-            <p className="text-lg font-medium leading-6 text-ink">Your coach</p>
-            <p className="text-sm text-accent-text">Plan updated just now</p>
+            <p className="text-lg font-medium leading-6 text-ink">
+              Create a Challenge Group
+            </p>
+            <p className="text-sm text-accent-text">Invite your challengers</p>
           </div>
           <Link
             href="/chat"
-            aria-label="Chat with your coach"
+            aria-label="Open group chat"
             className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent text-white"
           >
             <Icon d="M4 5h16v11H9l-5 4Z" className="h-5 w-5" />
