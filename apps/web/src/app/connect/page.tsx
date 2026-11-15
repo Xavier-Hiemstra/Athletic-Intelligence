@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   ActionBar,
@@ -84,6 +85,7 @@ function CheckRow({
 }
 
 export default function Connect() {
+  const router = useRouter();
   const [step, setStep] = useState(0);
   const [phase, setPhase] = useState<"idle" | "loading" | "done">("idle");
   const [installed, setInstalled] = useState<string[]>([]);
@@ -93,12 +95,15 @@ export default function Connect() {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
 
-  // Demo: pretend to build the profile, then show Done.
+  // Demo: pretend to build the profile, show Done, then go to the home page.
   useEffect(() => {
-    if (phase !== "loading") return;
-    const t = setTimeout(() => setPhase("done"), 2500);
+    if (phase === "idle") return;
+    const t = setTimeout(
+      () => (phase === "loading" ? setPhase("done") : router.push("/home")),
+      phase === "loading" ? 2500 : 1800,
+    );
     return () => clearTimeout(t);
-  }, [phase]);
+  }, [phase, router]);
 
   const toggle = (
     setter: React.Dispatch<React.SetStateAction<string[]>>,
