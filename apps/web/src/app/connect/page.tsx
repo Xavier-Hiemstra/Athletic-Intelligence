@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ActionBar,
   ProgressBar,
@@ -85,12 +85,20 @@ function CheckRow({
 
 export default function Connect() {
   const [step, setStep] = useState(0);
+  const [phase, setPhase] = useState<"idle" | "loading" | "done">("idle");
   const [installed, setInstalled] = useState<string[]>([]);
   // Apps added on the search page, and which of them are checked.
   const [extra, setExtra] = useState<string[]>(DEFAULT_EXTRA);
   const [checkedExtra, setCheckedExtra] = useState<string[]>(DEFAULT_EXTRA);
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
+
+  // Demo: pretend to build the profile, then show Done.
+  useEffect(() => {
+    if (phase !== "loading") return;
+    const t = setTimeout(() => setPhase("done"), 2500);
+    return () => clearTimeout(t);
+  }, [phase]);
 
   const toggle = (
     setter: React.Dispatch<React.SetStateAction<string[]>>,
@@ -246,13 +254,64 @@ export default function Connect() {
             if (step === 0) {
               setStep(1);
               window.scrollTo(0, 0);
+            } else {
+              setPhase("loading");
             }
           }}
           className={continueClass}
         >
-          Continue
+          {step === 0 ? "Continue" : "Finish"}
         </button>
       </ActionBar>
+
+      {phase !== "idle" && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-surface-100 px-4 text-center"
+        >
+          {phase === "loading" ? (
+            <>
+              <div
+                aria-hidden
+                className="h-14 w-14 animate-spin rounded-full border-2 border-line border-t-ink motion-reduce:animate-none"
+              />
+              <p className="text-xl font-semibold text-ink">
+                Building your Training Profile
+              </p>
+            </>
+          ) : (
+            <>
+              <svg
+                aria-hidden
+                viewBox="0 0 56 56"
+                className="h-14 w-14 text-ink"
+              >
+                <circle
+                  cx="28"
+                  cy="28"
+                  r="26"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  pathLength={1}
+                  className="draw-stroke"
+                />
+                <path
+                  d="M16 29 25 38 41 19"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="square"
+                  pathLength={1}
+                  className="draw-stroke draw-delay"
+                />
+              </svg>
+              <p className="text-xl font-semibold text-ink">Done</p>
+            </>
+          )}
+        </div>
+      )}
     </main>
   );
 }
